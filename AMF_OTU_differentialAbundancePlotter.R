@@ -3,9 +3,7 @@
 # this script is a horizontal version of the bargraph presented vertically in Figure 4
 # (labels [and alternating light/dark bars] from left-to-right on the horizontal graph 
 # from this script are in the same order as they are from top-to-bottom on the vertical
-# graph in Figure 4). The color of the bars was manually changed for contrast and 
-# ease of interpreting the results. 
-# The phylogeny was manually added in Figure 4 following the accepted
+# graph in Figure 4). The phylogeny was manually added in Figure 4 following the accepted
 # AM fungal genus (or family) phylogenetic relationships (Redecker et al 2013 Mycorrhiza
 # DOI 10.1007/s00572-013-0486-y).
 
@@ -19,13 +17,13 @@ library('DESeq2')
 
 #-----------------------------
 # Import the OTU table
-OTUTable <- read.table("~/Plant-Microbiomes-in-Grassland-Restorations-master/AMF_OTU_tableForPlotting.tsv", header=TRUE, sep="\t", stringsAsFactors = FALSE)
+OTUTable <- read.table("~/Box Sync/R_code/Gradient_dataAndPlotter_forLizs_review/AMF_OTU_tableForPlotting.tsv", header=TRUE, sep="\t", stringsAsFactors = FALSE)
 
 # metadata for each of the samples, particularly whether they are from remnant or disturbed sites.
-metadataForSamples <- read.table("~/Plant-Microbiomes-in-Grassland-Restorations-master/metadataForSamples.tsv", sep = "\t", header = TRUE)
+metadataForSamples <- read.table("~/Box Sync/R_code/Gradient_dataAndPlotter_forLizs_review/metadataForSamples.tsv", sep = "\t", header = TRUE)
 
 # taxonomic attribution for each OTU
-taxonomicAttributions <- read.table("~/Plant-Microbiomes-in-Grassland-Restorations-master/taxonomicAttributionOfAMF_OTUs.tsv", sep = "\t", header = TRUE, stringsAsFactors = FALSE)
+taxonomicAttributions <- read.table("~/Box Sync/R_code/Gradient_dataAndPlotter_forLizs_review/taxonomicAttributionOfAMF_OTUs.tsv", sep = "\t", header = TRUE, stringsAsFactors = FALSE)
 
 # Need to add a leading 'X' to the taxonomic attributions before using them to match
 # against the column names in the OTUTable
